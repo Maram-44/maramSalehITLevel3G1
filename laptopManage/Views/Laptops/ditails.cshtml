@@ -1,0 +1,40 @@
+﻿@model Laptop
+@{
+    ViewData["Title"] = "ditails";
+}
+
+<h1 class="mb-4 mt-5">Details Of Laptop</h1>
+
+<table class="table table-hover">
+    <tr>
+        <td width="30%" class="table-primary">Name</td>
+        <td class="table-secondary" width="50%">@Model.name</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">Ram</td>
+        <td class="table-secondary" width="50%">@Model.ram</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">Hardisck</td>
+        <td class="table-secondary" width="50%">@Model.hard</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">Size</td>
+        <td class="table-secondary" width="50%">@Model.size</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">Year Of Issue</td>
+        <td class="table-secondary" width="50%">@Model.yearOfIssue</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">CPU</td>
+        <td class="table-secondary" width="50%">@Model.cpu</td>
+    </tr>
+    <tr>
+        <td width="30%" class="table-primary">Manufacturer Name</td>
+        <td class="table-secondary" width="50%">@Model.manufacturer</td>
+    </tr>
+</table>
+
+<a asp-controller="Laptops" asp-action="Index" class="btn btn-secondary btn-lg mt-5"> Back To Laptops List</a>
+       

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Laptop>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="container p-3">
+
+
+    <div class="row pt-4 mb-3">
+        <div class="col-6" >
+            <h1 class="">Items View</h1>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Laptops" asp-action="add" class="btn btn-primary">
+                <i class="bi bi-plus"></i> &nbsp; Add Laptop
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="row">LAPTOP NAME</th>
+                <th scope="row">RAM</th>
+                <th scope="row">DISCK</th>
+                <th scope="row">CPU</th>
+                <th scope="row">SIZE </th>
+                <th scope="row"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var laptop in Model)
+            {
+                <tr class="table-primary">
+                    <td width="25%">@laptop.name</td>
+                    <td width="10%">@laptop.ram</td>
+                    <td width="10%">@laptop.hard</td>
+                    <td width="10%">@laptop.cpu</td>
+                    <td width="10%">@laptop.size</td>
+                    <td>
+
+                        <a style="margin-left:40px;" class="btn btn-sm btn-success" asp-controller="Laptops" asp-action="Edit" asp-route-Id="@laptop.id">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        &nbsp;
+                        <a class="btn btn-sm btn-danger" asp-action="delete" asp-controller="Laptops" asp-route-Id="@laptop.id">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                        <a class="btn btn-sm btn-secondary" style="margin-left:6px" asp-action="ditails" asp-controller="Laptops" asp-route-Id="@laptop.id">
+                            <i class="bi bi-three-dots"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

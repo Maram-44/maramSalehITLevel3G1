@@ -1,0 +1,59 @@
+﻿@model Laptop
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Laptop</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="id">Name</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="name">
+            <span asp-validation-for="name" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="yearOfIssue">Year Of Issue</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="yearOfIssue">
+            <span asp-validation-for="yearOfIssue" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="ram">Ram</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="ram">
+            <span asp-validation-for="ram" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="hard">Hard Disck</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="hard">
+            <span asp-validation-for="hard" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="cpu">CPU</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="cpu">
+            <span asp-validation-for="cpu" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="manufacturer">Manufacturer Name</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="manufacturer">
+            <span asp-validation-for="manufacturer" class="text-danger"></span>
+
+        </div>
+        <div>
+            <label class="col-form-label mt-4" asp-for="size">Size</label>
+            <input type="text" class="form-control" id="inputDefault" asp-for="size">
+            <span asp-validation-for="size" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg mt-5 " style="margin-right:20px">Edit</button>
+        <a asp-controller="Laptops" asp-action="Index" class="btn btn-secondary btn-lg mt-5"> Back To Laptops List</a>
+    </div>
+</form>
